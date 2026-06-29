@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <title>GlobalGrid2050</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./assets/dashboard.css">
+<link rel="stylesheet" href="./assets/dashboard.css?v=20260629-redboard-2">
 </head>
 <body>
 <h1>GlobalGrid2050</h1>
 
-<p class="build-status">Federation build board. Not a public launch page. Use this URL as a temporary visual notepad until the new repo federation is complete.</p>
+<p class="build-status" style="border:1px solid #ff3333;color:#ff3333;font-weight:bold;padding:14px;">Federation build board. Not a public launch page. Use this URL as a temporary visual notepad until the new repo federation is complete.</p>
 
 <h2>Index</h2>
 
@@ -18,30 +18,32 @@
 <div id="menu" aria-live="polite"></div>
 
 <!-- TEMP SESSION BOARD START 2026-06-29 -->
-<hr class="red-line">
+<hr class="red-line" style="border:0;border-top:5px solid #ff3333;margin:36px 0 24px;">
 
-<section class="session-work" aria-labelledby="session-work-title">
-  <h2 id="session-work-title">29 June 2026 Homepage Notepad</h2>
-  <p>Temporary red project-management board. Use this page as the live working notepad. Tick what is active, add browser notes below, then delete this whole red section when the session is finished.</p>
+<section class="session-work" aria-labelledby="session-work-title" style="color:#ff3333;border:2px solid #ff3333;padding:16px;font-size:16px;line-height:1.35;">
+  <h2 id="session-work-title" style="color:#ff3333;margin:0 0 12px;font-size:28px;line-height:1.15;">29 June 2026 Homepage Notepad</h2>
+  <p style="margin:0 0 18px;color:#ff3333;">Temporary visual build board. Tick only the active workstream. Delete this red section when finished.</p>
 
-  <h3>Alphabetical work log</h3>
-  <label><input type="checkbox" data-session-item="catalogue-flat-index"> Catalogue flat index added to the homepage.</label>
-  <label><input type="checkbox" data-session-item="data-gb-electricity-parquet-spine"> Data GB electricity repo confirmed as the lean Parquet data spine.</label>
-  <label><input type="checkbox" data-session-item="federation-not-launch"> Federation status clarified: this is a build board, not launch promotion.</label>
-  <label><input type="checkbox" data-session-item="gb-interconnector-codes"> GB interconnector code set reviewed as the working source list.</label>
-  <label><input type="checkbox" data-session-item="gb-interconnector-data-domain"> GB interconnector data domain placed inside data-gb-electricity for now, not a separate repo yet.</label>
-  <label><input type="checkbox" data-session-item="github-concerned-repos"> GitHub concerned repos identified: data repo, homepage repo, and monolith repo.</label>
-  <label><input type="checkbox" data-session-item="homepage-red-line"> Homepage red line added below the clean index.</label>
-  <label><input type="checkbox" data-session-item="homepage-red-notepad"> Homepage red notepad expanded for visual project management.</label>
-  <label><input type="checkbox" data-session-item="interconnector-sign-rule"> Interconnector sign rule recorded: imports positive, exports negative.</label>
-  <label><input type="checkbox" data-session-item="lean-data-before-ui"> Lean data first agreed before constructing new UI repos.</label>
-  <label><input type="checkbox" data-session-item="monolith-legacy-boundary"> Monolith treated as legacy source boundary, not the place for new data architecture.</label>
-  <label><input type="checkbox" data-session-item="parquet-next-audit"> Parquet interconnector audit marked as next controlled GridBot-style task.</label>
-  <label><input type="checkbox" data-session-item="public-caution"> Public URL caution recorded: no private, NDA, or personal working material here.</label>
-  <label><input type="checkbox" data-session-item="uk-energy-tracker-live-consumer"> UK Energy Tracking V6 generation history kept as live consumer until clean data spine is proven.</label>
+  <h3 style="color:#ff3333;margin:18px 0 10px;font-size:20px;">Alphabetical work log</h3>
+  <div class="checklist-rows">
+    <label class="check-row"><input type="checkbox" data-session-item="catalogue-flat-index"><span>Catalogue flat index added to the homepage.</span></label>
+    <label class="check-row"><input type="checkbox" data-session-item="data-gb-electricity-parquet-spine"><span>Data GB electricity repo confirmed as the lean Parquet data spine.</span></label>
+    <label class="check-row"><input type="checkbox" data-session-item="federation-not-launch"><span>Federation status clarified: this is a build board, not launch promotion.</span></label>
+    <label class="check-row"><input type="checkbox" data-session-item="gb-interconnector-codes"><span>GB interconnector code set reviewed as the working source list.</span></label>
+    <label class="check-row"><input type="checkbox" data-session-item="gb-interconnector-data-domain"><span>GB interconnector data domain placed inside data-gb-electricity for now.</span></label>
+    <label class="check-row"><input type="checkbox" data-session-item="github-concerned-repos"><span>GitHub concerned repos identified: data repo, homepage repo, monolith repo.</span></label>
+    <label class="check-row"><input type="checkbox" data-session-item="homepage-red-line"><span>Homepage red line added below the clean index.</span></label>
+    <label class="check-row"><input type="checkbox" data-session-item="homepage-red-notepad"><span>Homepage red notepad expanded for visual project management.</span></label>
+    <label class="check-row"><input type="checkbox" data-session-item="interconnector-sign-rule"><span>Interconnector sign rule recorded: imports positive, exports negative.</span></label>
+    <label class="check-row"><input type="checkbox" data-session-item="lean-data-before-ui"><span>Lean data first agreed before constructing new UI repos.</span></label>
+    <label class="check-row"><input type="checkbox" data-session-item="monolith-legacy-boundary"><span>Monolith treated as legacy source boundary, not new data architecture.</span></label>
+    <label class="check-row"><input type="checkbox" data-session-item="parquet-next-audit"><span>Parquet interconnector audit marked as next controlled task.</span></label>
+    <label class="check-row"><input type="checkbox" data-session-item="public-caution"><span>Public URL caution recorded: no private, NDA, or personal working material.</span></label>
+    <label class="check-row"><input type="checkbox" data-session-item="uk-energy-tracker-live-consumer"><span>UK Energy Tracking V6 generation history kept as live consumer for now.</span></label>
+  </div>
 
-  <h3>Live scratchpad</h3>
-  <textarea id="sessionNotes" rows="10" spellcheck="true">NEXT:
+  <h3 style="color:#ff3333;margin:22px 0 10px;font-size:20px;">Live scratchpad</h3>
+  <textarea id="sessionNotes" rows="9" spellcheck="true" style="width:100%;box-sizing:border-box;background:#080000;color:#ff3333;border:1px solid #ff3333;font-family:Courier,monospace;font-size:15px;line-height:1.4;padding:10px;">NEXT:
 Audit-only task for data-gb-electricity.
 Add interconnectors as a top-level Parquet domain.
 Keep generation, prices and interconnectors separate.
@@ -56,6 +58,6 @@ Do not put raw bulk data in the homepage or app repos.
   <p><strong>Disclaimer:</strong> Content provided for general technical documentation and research purposes only.</p>
 </div>
 
-<script src="./assets/dashboard.js" defer></script>
+<script src="./assets/dashboard.js?v=20260629-redboard-2" defer></script>
 </body>
 </html>
