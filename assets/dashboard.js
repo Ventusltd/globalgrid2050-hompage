@@ -95,8 +95,18 @@
     });
   }
 
+  function initSessionNotes() {
+    const box = document.getElementById('sessionNotes');
+    if (!box) return;
+    const key = 'gg2050-session-notes';
+    const saved = sessionStorage.getItem(key);
+    if (saved !== null) box.value = saved;
+    box.addEventListener('input', () => sessionStorage.setItem(key, box.value));
+  }
+
   async function init() {
     initChecklist();
+    initSessionNotes();
 
     try {
       const response = await fetch(CATALOG_URL, { cache: 'no-store' });
