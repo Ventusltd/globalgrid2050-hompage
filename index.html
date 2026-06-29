@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>GlobalGrid2050</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./assets/dashboard.css?v=20260629-redboard-5">
+<link rel="stylesheet" href="./assets/dashboard.css?v=20260629-checklist-1">
 </head>
 <body>
 <h1>GlobalGrid2050</h1>
@@ -18,59 +18,46 @@
 
 <section class="session-work" aria-labelledby="session-work-title" style="color:#ff3333;border:2px solid #ff3333;padding:16px;font-size:16px;line-height:1.35;">
   <h2 id="session-work-title" style="color:#ff3333;margin:0 0 12px;font-size:28px;line-height:1.15;">29 June 2026 Federation Build Board</h2>
-  <p style="margin:0 0 14px;color:#ff3333;">Everything below this red line is temporary working memory. Type priority numbers, press Sort, tick the active workstream, then delete this red section when finished.</p>
+  <p style="margin:0 0 14px;color:#ff3333;">Everything below this red line is temporary working memory. Tick the active workstream. Put the most important task at the top.</p>
 
-  <div style="display:flex;gap:10px;align-items:center;margin:0 0 16px;flex-wrap:wrap;">
-    <button id="sortChecklist" type="button" style="background:#190000;color:#ff3333;border:1px solid #ff3333;font-family:Courier,monospace;font-size:15px;padding:8px 12px;">Sort by priority</button>
-    <span style="color:#ff3333;font-size:14px;">1 = highest priority</span>
-  </div>
-
-  <h3 style="color:#ff3333;margin:18px 0 10px;font-size:20px;">Priority work log</h3>
-  <div id="priorityChecklist" class="checklist-rows">
-    <div class="priority-row" data-session-item="data-gb-electricity-parquet-spine" style="display:grid;grid-template-columns:42px 28px 1fr;gap:8px;align-items:start;padding:7px 0;color:#ff3333;">
-      <input class="priority-input" type="number" min="1" value="1" aria-label="Priority" style="width:38px;background:#080000;color:#ff3333;border:1px solid #ff3333;font-family:Courier,monospace;font-size:15px;">
+  <h3 style="color:#ff3333;margin:18px 0 10px;font-size:20px;">Work log</h3>
+  <div id="taskChecklist" class="checklist-rows">
+    <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;">
       <input class="task-check" type="checkbox" data-session-item="data-gb-electricity-parquet-spine" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
       <span>Data GB electricity repo confirmed as the lean Parquet data spine.</span>
-    </div>
-    <div class="priority-row" data-session-item="gb-interconnector-data-domain" style="display:grid;grid-template-columns:42px 28px 1fr;gap:8px;align-items:start;padding:7px 0;color:#ff3333;">
-      <input class="priority-input" type="number" min="1" value="2" aria-label="Priority" style="width:38px;background:#080000;color:#ff3333;border:1px solid #ff3333;font-family:Courier,monospace;font-size:15px;">
+    </label>
+    <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;">
       <input class="task-check" type="checkbox" data-session-item="gb-interconnector-data-domain" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
       <span>GB interconnector data domain goes inside data-gb-electricity for now.</span>
-    </div>
-    <div class="priority-row" data-session-item="parquet-next-audit" style="display:grid;grid-template-columns:42px 28px 1fr;gap:8px;align-items:start;padding:7px 0;color:#ff3333;">
-      <input class="priority-input" type="number" min="1" value="3" aria-label="Priority" style="width:38px;background:#080000;color:#ff3333;border:1px solid #ff3333;font-family:Courier,monospace;font-size:15px;">
+    </label>
+    <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;">
       <input class="task-check" type="checkbox" data-session-item="parquet-next-audit" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
       <span>Parquet interconnector audit is the next controlled task.</span>
-    </div>
-    <div class="priority-row" data-session-item="lean-data-before-ui" style="display:grid;grid-template-columns:42px 28px 1fr;gap:8px;align-items:start;padding:7px 0;color:#ff3333;">
-      <input class="priority-input" type="number" min="1" value="4" aria-label="Priority" style="width:38px;background:#080000;color:#ff3333;border:1px solid #ff3333;font-family:Courier,monospace;font-size:15px;">
+    </label>
+    <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;">
       <input class="task-check" type="checkbox" data-session-item="lean-data-before-ui" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
       <span>Lean data first before constructing new UI repos.</span>
-    </div>
-    <div class="priority-row" data-session-item="launch-ready-pages-only" style="display:grid;grid-template-columns:42px 28px 1fr;gap:8px;align-items:start;padding:7px 0;color:#ff3333;">
-      <input class="priority-input" type="number" min="1" value="5" aria-label="Priority" style="width:38px;background:#080000;color:#ff3333;border:1px solid #ff3333;font-family:Courier,monospace;font-size:15px;">
+    </label>
+    <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;">
       <input class="task-check" type="checkbox" data-session-item="launch-ready-pages-only" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
       <span>Above the red line is reserved only for launch-ready pages.</span>
-    </div>
-    <div class="priority-row" data-session-item="monolith-legacy-boundary" style="display:grid;grid-template-columns:42px 28px 1fr;gap:8px;align-items:start;padding:7px 0;color:#ff3333;">
-      <input class="priority-input" type="number" min="1" value="6" aria-label="Priority" style="width:38px;background:#080000;color:#ff3333;border:1px solid #ff3333;font-family:Courier,monospace;font-size:15px;">
+    </label>
+    <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;">
       <input class="task-check" type="checkbox" data-session-item="monolith-legacy-boundary" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
       <span>Monolith is a legacy source boundary, not new data architecture.</span>
-    </div>
-    <div class="priority-row" data-session-item="uk-energy-tracker-live-consumer" style="display:grid;grid-template-columns:42px 28px 1fr;gap:8px;align-items:start;padding:7px 0;color:#ff3333;">
-      <input class="priority-input" type="number" min="1" value="7" aria-label="Priority" style="width:38px;background:#080000;color:#ff3333;border:1px solid #ff3333;font-family:Courier,monospace;font-size:15px;">
+    </label>
+    <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;">
       <input class="task-check" type="checkbox" data-session-item="uk-energy-tracker-live-consumer" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
       <span>UK Energy Tracking V6 generation history stays as live consumer for now.</span>
-    </div>
-    <div class="priority-row" data-session-item="public-caution" style="display:grid;grid-template-columns:42px 28px 1fr;gap:8px;align-items:start;padding:7px 0;color:#ff3333;">
-      <input class="priority-input" type="number" min="1" value="8" aria-label="Priority" style="width:38px;background:#080000;color:#ff3333;border:1px solid #ff3333;font-family:Courier,monospace;font-size:15px;">
+    </label>
+    <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;">
       <input class="task-check" type="checkbox" data-session-item="public-caution" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
       <span>Public URL caution: no private, NDA, or personal working material.</span>
-    </div>
+    </label>
   </div>
 
   <h3 style="color:#ff3333;margin:22px 0 10px;font-size:20px;">Live scratchpad</h3>
-  <textarea id="sessionNotes" rows="16" spellcheck="true" style="width:100%;box-sizing:border-box;background:#080000;color:#ff3333;border:1px solid #ff3333;font-family:Courier,monospace;font-size:15px;line-height:1.4;padding:10px;">NEXT:
+  <textarea id="sessionNotes" rows="15" spellcheck="true" style="width:100%;box-sizing:border-box;background:#080000;color:#ff3333;border:1px solid #ff3333;font-family:Courier,monospace;font-size:15px;line-height:1.4;padding:10px;">NEXT:
 Audit-only task for data-gb-electricity.
 Add interconnectors as a top-level Parquet domain.
 Keep generation, prices and interconnectors separate.
@@ -78,20 +65,19 @@ Do not build new UI repo until clean Parquet outputs are proven.
 Do not promote this homepage until federation is complete.
 Do not put raw bulk data in the homepage or app repos.
 
-GITHUB EDIT INSTRUCTIONS:
-Edit this board here:
+SMALL PRINT:
+To change this board, edit index.html here:
 https://github.com/Ventusltd/globalgrid2050-hompage/blob/main/index.html
 
-To add, delete, or change tasks:
-Edit index.html between TEMP SESSION BOARD START and TEMP SESSION BOARD END.
-Each task is a priority-row block inside priorityChecklist.
-Copy one priority-row block to add a task.
-Delete one priority-row block to remove a task.
-Change the text inside the span to rename a task.
+Only edit between TEMP SESSION BOARD START and TEMP SESSION BOARD END.
+Move a check-row block higher to make it more important.
+Copy a check-row block to add a task.
+Delete a check-row block to remove a task.
 Commit to main and GitHub Pages will redeploy.
+Or ask ChatGPT to reorder/add/delete the task.
 </textarea>
 
-  <p style="margin:10px 0 0;color:#ff3333;font-size:14px;">Permanent edit link: <a href="https://github.com/Ventusltd/globalgrid2050-hompage/blob/main/index.html" style="color:#ff3333;text-decoration:underline;">GitHub index.html</a></p>
+  <p style="margin:10px 0 0;color:#ff3333;font-size:14px;">Edit link: <a href="https://github.com/Ventusltd/globalgrid2050-hompage/blob/main/index.html" style="color:#ff3333;text-decoration:underline;">GitHub index.html</a></p>
 </section>
 <!-- TEMP SESSION BOARD END 2026-06-29 -->
 
@@ -99,6 +85,6 @@ Commit to main and GitHub Pages will redeploy.
   <p><strong>Disclaimer:</strong> Content provided for general technical documentation and research purposes only.</p>
 </div>
 
-<script src="./assets/dashboard.js?v=20260629-redboard-5" defer></script>
+<script src="./assets/dashboard.js?v=20260629-checklist-1" defer></script>
 </body>
 </html>
