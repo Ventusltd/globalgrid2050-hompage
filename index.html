@@ -4,42 +4,69 @@
 <meta charset="UTF-8">
 <title>GlobalGrid2050</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./assets/dashboard.css?v=20260629-redboard-2">
+<link rel="stylesheet" href="./assets/dashboard.css?v=20260629-redboard-4">
 </head>
 <body>
 <h1>GlobalGrid2050</h1>
 
-<p class="build-status" style="border:1px solid #ff3333;color:#ff3333;font-weight:bold;padding:14px;">Federation build board. Not a public launch page. Use this URL as a temporary visual notepad until the new repo federation is complete.</p>
-
-<h2>Index</h2>
-
-<input type="text" id="gridSearch" placeholder="Search index..." autocomplete="off">
-
+<h2>Launch-ready Pages</h2>
+<input type="text" id="gridSearch" placeholder="Search launch-ready pages..." autocomplete="off">
 <div id="menu" aria-live="polite"></div>
 
 <!-- TEMP SESSION BOARD START 2026-06-29 -->
 <hr class="red-line" style="border:0;border-top:5px solid #ff3333;margin:36px 0 24px;">
 
 <section class="session-work" aria-labelledby="session-work-title" style="color:#ff3333;border:2px solid #ff3333;padding:16px;font-size:16px;line-height:1.35;">
-  <h2 id="session-work-title" style="color:#ff3333;margin:0 0 12px;font-size:28px;line-height:1.15;">29 June 2026 Homepage Notepad</h2>
-  <p style="margin:0 0 18px;color:#ff3333;">Temporary visual build board. Tick only the active workstream. Delete this red section when finished.</p>
+  <h2 id="session-work-title" style="color:#ff3333;margin:0 0 12px;font-size:28px;line-height:1.15;">29 June 2026 Federation Build Board</h2>
+  <p style="margin:0 0 14px;color:#ff3333;">Everything below this red line is temporary working memory. Type priority numbers, press Sort, tick the active workstream, then delete this red section when finished.</p>
 
-  <h3 style="color:#ff3333;margin:18px 0 10px;font-size:20px;">Alphabetical work log</h3>
-  <div class="checklist-rows">
-    <label class="check-row"><input type="checkbox" data-session-item="catalogue-flat-index"><span>Catalogue flat index added to the homepage.</span></label>
-    <label class="check-row"><input type="checkbox" data-session-item="data-gb-electricity-parquet-spine"><span>Data GB electricity repo confirmed as the lean Parquet data spine.</span></label>
-    <label class="check-row"><input type="checkbox" data-session-item="federation-not-launch"><span>Federation status clarified: this is a build board, not launch promotion.</span></label>
-    <label class="check-row"><input type="checkbox" data-session-item="gb-interconnector-codes"><span>GB interconnector code set reviewed as the working source list.</span></label>
-    <label class="check-row"><input type="checkbox" data-session-item="gb-interconnector-data-domain"><span>GB interconnector data domain placed inside data-gb-electricity for now.</span></label>
-    <label class="check-row"><input type="checkbox" data-session-item="github-concerned-repos"><span>GitHub concerned repos identified: data repo, homepage repo, monolith repo.</span></label>
-    <label class="check-row"><input type="checkbox" data-session-item="homepage-red-line"><span>Homepage red line added below the clean index.</span></label>
-    <label class="check-row"><input type="checkbox" data-session-item="homepage-red-notepad"><span>Homepage red notepad expanded for visual project management.</span></label>
-    <label class="check-row"><input type="checkbox" data-session-item="interconnector-sign-rule"><span>Interconnector sign rule recorded: imports positive, exports negative.</span></label>
-    <label class="check-row"><input type="checkbox" data-session-item="lean-data-before-ui"><span>Lean data first agreed before constructing new UI repos.</span></label>
-    <label class="check-row"><input type="checkbox" data-session-item="monolith-legacy-boundary"><span>Monolith treated as legacy source boundary, not new data architecture.</span></label>
-    <label class="check-row"><input type="checkbox" data-session-item="parquet-next-audit"><span>Parquet interconnector audit marked as next controlled task.</span></label>
-    <label class="check-row"><input type="checkbox" data-session-item="public-caution"><span>Public URL caution recorded: no private, NDA, or personal working material.</span></label>
-    <label class="check-row"><input type="checkbox" data-session-item="uk-energy-tracker-live-consumer"><span>UK Energy Tracking V6 generation history kept as live consumer for now.</span></label>
+  <div style="display:flex;gap:10px;align-items:center;margin:0 0 16px;flex-wrap:wrap;">
+    <button id="sortChecklist" type="button" style="background:#190000;color:#ff3333;border:1px solid #ff3333;font-family:Courier,monospace;font-size:15px;padding:8px 12px;">Sort by priority</button>
+    <span style="color:#ff3333;font-size:14px;">1 = highest priority</span>
+  </div>
+
+  <h3 style="color:#ff3333;margin:18px 0 10px;font-size:20px;">Priority work log</h3>
+  <div id="priorityChecklist" class="checklist-rows">
+    <div class="priority-row" data-session-item="data-gb-electricity-parquet-spine" style="display:grid;grid-template-columns:42px 28px 1fr;gap:8px;align-items:start;padding:7px 0;color:#ff3333;">
+      <input class="priority-input" type="number" min="1" value="1" aria-label="Priority" style="width:38px;background:#080000;color:#ff3333;border:1px solid #ff3333;font-family:Courier,monospace;font-size:15px;">
+      <input class="task-check" type="checkbox" data-session-item="data-gb-electricity-parquet-spine" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
+      <span>Data GB electricity repo confirmed as the lean Parquet data spine.</span>
+    </div>
+    <div class="priority-row" data-session-item="gb-interconnector-data-domain" style="display:grid;grid-template-columns:42px 28px 1fr;gap:8px;align-items:start;padding:7px 0;color:#ff3333;">
+      <input class="priority-input" type="number" min="1" value="2" aria-label="Priority" style="width:38px;background:#080000;color:#ff3333;border:1px solid #ff3333;font-family:Courier,monospace;font-size:15px;">
+      <input class="task-check" type="checkbox" data-session-item="gb-interconnector-data-domain" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
+      <span>GB interconnector data domain goes inside data-gb-electricity for now.</span>
+    </div>
+    <div class="priority-row" data-session-item="parquet-next-audit" style="display:grid;grid-template-columns:42px 28px 1fr;gap:8px;align-items:start;padding:7px 0;color:#ff3333;">
+      <input class="priority-input" type="number" min="1" value="3" aria-label="Priority" style="width:38px;background:#080000;color:#ff3333;border:1px solid #ff3333;font-family:Courier,monospace;font-size:15px;">
+      <input class="task-check" type="checkbox" data-session-item="parquet-next-audit" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
+      <span>Parquet interconnector audit is the next controlled task.</span>
+    </div>
+    <div class="priority-row" data-session-item="lean-data-before-ui" style="display:grid;grid-template-columns:42px 28px 1fr;gap:8px;align-items:start;padding:7px 0;color:#ff3333;">
+      <input class="priority-input" type="number" min="1" value="4" aria-label="Priority" style="width:38px;background:#080000;color:#ff3333;border:1px solid #ff3333;font-family:Courier,monospace;font-size:15px;">
+      <input class="task-check" type="checkbox" data-session-item="lean-data-before-ui" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
+      <span>Lean data first before constructing new UI repos.</span>
+    </div>
+    <div class="priority-row" data-session-item="launch-ready-pages-only" style="display:grid;grid-template-columns:42px 28px 1fr;gap:8px;align-items:start;padding:7px 0;color:#ff3333;">
+      <input class="priority-input" type="number" min="1" value="5" aria-label="Priority" style="width:38px;background:#080000;color:#ff3333;border:1px solid #ff3333;font-family:Courier,monospace;font-size:15px;">
+      <input class="task-check" type="checkbox" data-session-item="launch-ready-pages-only" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
+      <span>Above the red line is reserved only for launch-ready pages.</span>
+    </div>
+    <div class="priority-row" data-session-item="monolith-legacy-boundary" style="display:grid;grid-template-columns:42px 28px 1fr;gap:8px;align-items:start;padding:7px 0;color:#ff3333;">
+      <input class="priority-input" type="number" min="1" value="6" aria-label="Priority" style="width:38px;background:#080000;color:#ff3333;border:1px solid #ff3333;font-family:Courier,monospace;font-size:15px;">
+      <input class="task-check" type="checkbox" data-session-item="monolith-legacy-boundary" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
+      <span>Monolith is a legacy source boundary, not new data architecture.</span>
+    </div>
+    <div class="priority-row" data-session-item="uk-energy-tracker-live-consumer" style="display:grid;grid-template-columns:42px 28px 1fr;gap:8px;align-items:start;padding:7px 0;color:#ff3333;">
+      <input class="priority-input" type="number" min="1" value="7" aria-label="Priority" style="width:38px;background:#080000;color:#ff3333;border:1px solid #ff3333;font-family:Courier,monospace;font-size:15px;">
+      <input class="task-check" type="checkbox" data-session-item="uk-energy-tracker-live-consumer" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
+      <span>UK Energy Tracking V6 generation history stays as live consumer for now.</span>
+    </div>
+    <div class="priority-row" data-session-item="public-caution" style="display:grid;grid-template-columns:42px 28px 1fr;gap:8px;align-items:start;padding:7px 0;color:#ff3333;">
+      <input class="priority-input" type="number" min="1" value="8" aria-label="Priority" style="width:38px;background:#080000;color:#ff3333;border:1px solid #ff3333;font-family:Courier,monospace;font-size:15px;">
+      <input class="task-check" type="checkbox" data-session-item="public-caution" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
+      <span>Public URL caution: no private, NDA, or personal working material.</span>
+    </div>
   </div>
 
   <h3 style="color:#ff3333;margin:22px 0 10px;font-size:20px;">Live scratchpad</h3>
@@ -58,6 +85,6 @@ Do not put raw bulk data in the homepage or app repos.
   <p><strong>Disclaimer:</strong> Content provided for general technical documentation and research purposes only.</p>
 </div>
 
-<script src="./assets/dashboard.js?v=20260629-redboard-2" defer></script>
+<script src="./assets/dashboard.js?v=20260629-redboard-4" defer></script>
 </body>
 </html>
