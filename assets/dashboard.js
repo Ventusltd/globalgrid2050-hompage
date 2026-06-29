@@ -55,7 +55,7 @@
     const rows = flatten(catalog);
 
     if (!rows.length) {
-      menu.innerHTML = `<p class="noresult">Index awaiting first verified entry.</p>`;
+      menu.innerHTML = `<p class="noresult">No launch-ready pages added yet. Working board is below the red line.</p>`;
       return;
     }
 
@@ -81,9 +81,14 @@
     if (noresult) noresult.style.display = anyVisible ? 'none' : '';
   }
 
+  function itemId(row) {
+    return row && row.dataset ? row.dataset.sessionItem : '';
+  }
+
   function initChecklist() {
-    document.querySelectorAll('[data-session-item]').forEach(box => {
-      const key = `gg2050-session-${box.dataset.sessionItem}`;
+    document.querySelectorAll('.task-check').forEach(box => {
+      const id = box.dataset.sessionItem;
+      const key = `gg2050-check-${id}`;
       box.checked = sessionStorage.getItem(key) === 'checked';
       box.addEventListener('change', () => {
         if (box.checked) {
@@ -93,6 +98,36 @@
         }
       });
     });
+  }
+
+  function rowPriority(row) {
+    const input = row.querySelector('.priority-input');
+    const value = input ? parseInt(input.value, 10) : 9999;
+    return Number.isFinite(value) ? value : 9999;
+  }
+
+  function sortPriorityRows() {
+    const list = document.getElementById('priorityChecklist');
+    if (!list) return;
+    const rows = Array.from(list.querySelectorAll('.priority-row'));
+    rows.sort((a, b) => rowPriority(a) - rowPriority(b) || itemId(a).localeCompare(itemId(b)));
+    rows.forEach(row => list.appendChild(row));
+  }
+
+  function initPriorityRows() {
+    document.querySelectorAll('.priority-row').forEach(row => {
+      const id = itemId(row);
+      const input = row.querySelector('.priority-input');
+      if (!id || !input) return;
+      const key = `gg2050-priority-${id}`;
+      const saved = sessionStorage.getItem(key);
+      if (saved !== null) input.value = saved;
+      input.addEventListener('input', () => sessionStorage.setItem(key, input.value));
+    });
+
+    const button = document.getElementById('sortChecklist');
+    if (button) button.addEventListener('click', sortPriorityRows);
+    sortPriorityRows();
   }
 
   function initSessionNotes() {
@@ -106,6 +141,7 @@
 
   async function init() {
     initChecklist();
+    initPriorityRows();
     initSessionNotes();
 
     try {
@@ -115,7 +151,7 @@
       build(catalog);
       searchInput.addEventListener('input', e => applySearch(e.target.value));
     } catch (err) {
-      menu.innerHTML = `<p class="noresult">Index failed to load.</p>`;
+      menu.innerHTML = `<p class="noresult">Launch-ready page index failed to load.</p>`;
       console.error('GlobalGrid2050 dashboard catalog load failed:', err);
     }
   }
