@@ -1,5 +1,17 @@
 # GlobalGrid2050 Homepage
 
+## Vision
+
+GlobalGrid2050 is being built as an open intelligence layer for the power grid transition from fossil fuels to net zero by 2050.
+
+Its purpose is to make grid, energy, engineering, procurement, construction, operation and transition knowledge searchable, auditable, educational and reusable.
+
+The platform begins with practical solar, BESS, cable, grid connection, electricity-system and project-origination tools, then grows by splitting each area of concern into focused repositories connected through this clean homepage dashboard.
+
+The dashboard is the public entry point. The code and data discipline are the trust layer. The search box is the access layer. The long-term aim is to help people understand, build and improve the electrical infrastructure needed for the energy transition.
+
+The platform itself is a public good. It should remain useful, open and uncluttered, while project-specific judgement, procurement, origination and execution support remain separate from the free public dashboard.
+
 This repository holds the lightweight public homepage shell for GlobalGrid2050.
 
 It is deliberately small. The homepage is not a build system and does not need Jekyll, Node, Python, React or a database server.
