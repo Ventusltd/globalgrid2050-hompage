@@ -1,0 +1,36 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# Local secrets / environment
+.env
+.env.*
+*.local
+
+# Logs / temp
+*.log
+tmp/
+*.tmp
+
+# Node or dashboard tooling if added later
+node_modules/
+.npm/
+.cache/
+dist/
+build/
+coverage/
+
+# Python helper tooling if added later
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Jekyll output only if ever tested locally
+_site/
+.sass-cache/
+.jekyll-cache/
