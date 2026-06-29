@@ -1,7 +1,7 @@
 {
   "schemaVersion": "dashboard_catalog.v1",
   "title": "GlobalGrid2050",
-  "description": "Flat public index for the GlobalGrid2050 homepage. Keep entries deliberate and non-nested.",
+  "description": "Temporary staging index for the GlobalGrid2050 federation build board. This is not launch promotion.",
   "areas": [
     {
       "name": "Data GB Electricity Repository",
@@ -17,11 +17,12 @@
     {
       "name": "GlobalGrid2050 Homepage Repository",
       "url": "https://github.com/Ventusltd/globalgrid2050-hompage",
-      "note": "homepage dashboard",
+      "note": "staging dashboard repo",
       "tags": [
         "homepage",
         "dashboard",
-        "repo"
+        "repo",
+        "staging"
       ]
     },
     {
@@ -37,7 +38,7 @@
     {
       "name": "UK Energy Tracking V6",
       "url": "https://globalgrid2050.com/uk_energy_tracking_v6/",
-      "note": "live tracker",
+      "note": "live tracker consumer",
       "tags": [
         "uk",
         "energy",
@@ -48,7 +49,7 @@
     {
       "name": "UK Energy Tracking V6 Generation History",
       "url": "https://globalgrid2050.com/uk_energy_tracking_v6/generation_history/",
-      "note": "generation history",
+      "note": "live generation-history consumer",
       "tags": [
         "generation",
         "history",
