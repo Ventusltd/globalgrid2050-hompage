@@ -1,6 +1,60 @@
 {
   "schemaVersion": "dashboard_catalog.v1",
   "title": "GlobalGrid2050",
-  "description": "Structured dashboard catalogue for GlobalGrid2050 links. Initial public catalogue intentionally empty.",
-  "areas": []
+  "description": "Flat public index for the GlobalGrid2050 homepage. Keep entries deliberate and non-nested.",
+  "areas": [
+    {
+      "name": "Data GB Electricity Repository",
+      "url": "https://github.com/Ventusltd/data-gb-electricity",
+      "note": "lean parquet data spine",
+      "tags": [
+        "data",
+        "electricity",
+        "parquet",
+        "repo"
+      ]
+    },
+    {
+      "name": "GlobalGrid2050 Homepage Repository",
+      "url": "https://github.com/Ventusltd/globalgrid2050-hompage",
+      "note": "homepage dashboard",
+      "tags": [
+        "homepage",
+        "dashboard",
+        "repo"
+      ]
+    },
+    {
+      "name": "GlobalGrid2050 Monolith Repository",
+      "url": "https://github.com/Ventusltd/globalgrid2050",
+      "note": "legacy source boundary",
+      "tags": [
+        "monolith",
+        "legacy",
+        "repo"
+      ]
+    },
+    {
+      "name": "UK Energy Tracking V6",
+      "url": "https://globalgrid2050.com/uk_energy_tracking_v6/",
+      "note": "live tracker",
+      "tags": [
+        "uk",
+        "energy",
+        "tracking",
+        "v6"
+      ]
+    },
+    {
+      "name": "UK Energy Tracking V6 Generation History",
+      "url": "https://globalgrid2050.com/uk_energy_tracking_v6/generation_history/",
+      "note": "generation history",
+      "tags": [
+        "generation",
+        "history",
+        "uk",
+        "v6"
+      ]
+    }
+  ]
 }
