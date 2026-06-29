@@ -29,7 +29,7 @@
     <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;"><input class="task-check" type="checkbox" data-session-item="split-generation-and-interconnectors" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;"><span>Make sure domestic/onshore generation and interconnector flows are split correctly so users are not confused.</span></label>
     <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;"><input class="task-check" type="checkbox" data-session-item="add-first-independent-app-to-launch-section" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;"><span>Add the first completed independent app to the blue launch section above the red line.</span></label>
     <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;"><input class="task-check" type="checkbox" data-session-item="analyse-next-monolith-port" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;"><span>Analyse the next item to be moved from the GlobalGrid2050 monolith.</span></label>
-    <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;"><input class="task-check" type="checkbox" data-session-item="retire-monolith-target-date" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;"><span>Target all app ports complete, new homepage public, and old monolith retired by 31 December 2026.</span></label>
+    <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;"><input class="task-check" type="checkbox" data-session-item="old-monolith-reference" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;"><span>Keep the old monolith live and frozen as reference until a deliberate human cutover decision is made.</span></label>
     <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;"><input class="task-check" type="checkbox" data-session-item="restart-safe-automations" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;"><span>Restart needed automations only after data files are growing safely and no repo is becoming too large or slow.</span></label>
     <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;"><input class="task-check" type="checkbox" data-session-item="fault-headroom-private-wire-data-centres" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;"><span>Work towards fault headroom, private wire and data centre use cases.</span></label>
     <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;"><input class="task-check" type="checkbox" data-session-item="finish-topology-design-tools" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;"><span>Finish detailed topology design tools.</span></label>
@@ -46,7 +46,7 @@ Wire clean data to the new UI.
 Keep domestic/onshore generation and interconnector flows split correctly.
 Add first completed independent app above the red line.
 Analyse next monolith item to port.
-Target old monolith retirement by 31 December 2026.
+Keep the old monolith live and frozen as reference until a deliberate human cutover decision is made.
 Restart automations only when data growth is safe.
 Work towards fault headroom, private wire and data centres.
 Finish detailed topology design tools.
@@ -63,6 +63,15 @@ Copy a check-row block to add a task.
 Delete a check-row block to remove a task.
 Or ask ChatGPT to reorder/add/delete the task.
 </textarea>
+
+  <h3 style="color:#ff3333;margin:22px 0 10px;font-size:20px;">Progress notes</h3>
+  <div id="progressNotes" style="border:1px solid #ff3333;background:#100000;color:#ff3333;padding:12px;font-size:14px;line-height:1.45;">
+    <p style="margin:0 0 10px;"><strong>Federation trace note, 29 June 2026:</strong> the original live pages on <code>globalgrid2050.com</code> stay as they are. The old monolith is not being cut over or retired now. Its high-frequency workflows have been frozen or controlled so it can remain a reference source while the leaner federation is built beside it.</p>
+    <p style="margin:0 0 10px;"><strong>New UI staging repo:</strong> <a href="https://github.com/Ventusltd/gb-electricity-ui" style="color:#ff7777;text-decoration:underline;">gb-electricity-ui</a>. This currently contains simplified blank staging shells for <code>/uk_energy_tracking_v6/</code> and <code>/uk_energy_tracking_v6/generation_history/</code>. These are not exact full clones yet. Data loading is deliberately disabled.</p>
+    <p style="margin:0 0 10px;"><strong>Data ownership:</strong> <a href="https://github.com/Ventusltd/data-gb-electricity" style="color:#ff7777;text-decoration:underline;">data-gb-electricity</a> owns GB generation and price data. <a href="https://github.com/Ventusltd/data-interconnectors" style="color:#ff7777;text-decoration:underline;">data-interconnectors</a> owns interconnector flow data. UI repos consume data after proof; they must not become hidden data repos.</p>
+    <p style="margin:0 0 10px;"><strong>Doctrine:</strong> the federation data discipline lives in this homepage repo. Current pointers include <a href="./AI_READ_FIRST.md" style="color:#ff7777;text-decoration:underline;">AI_READ_FIRST.md</a>, <a href="./DATA_DISCIPLINE.md" style="color:#ff7777;text-decoration:underline;">DATA_DISCIPLINE.md</a> and <a href="./docs/DATA_DISCIPLINE_MANUAL.md" style="color:#ff7777;text-decoration:underline;">docs/DATA_DISCIPLINE_MANUAL.md</a>. Green is not proof. File count is not proof. Size is not proof. The proof is the declared data law tested on the declared key.</p>
+    <p style="margin:0;"><strong>Next trace task:</strong> create a proper cross-repo site map so every app, data repo, UI repo, source repo and staging URL has one recorded owner, status, data source, live URL and next action.</p>
+  </div>
 
   <p style="margin:10px 0 0;color:#ff3333;font-size:14px;">Edit link: <a href="https://github.com/Ventusltd/globalgrid2050-hompage/blob/main/index.html" style="color:#ff3333;text-decoration:underline;">GitHub index.html</a></p>
 </section>
