@@ -1,61 +1,6 @@
 {
   "schemaVersion": "dashboard_catalog.v1",
   "title": "GlobalGrid2050",
-  "description": "Temporary staging index for the GlobalGrid2050 federation build board. This is not launch promotion.",
-  "areas": [
-    {
-      "name": "Data GB Electricity Repository",
-      "url": "https://github.com/Ventusltd/data-gb-electricity",
-      "note": "lean parquet data spine",
-      "tags": [
-        "data",
-        "electricity",
-        "parquet",
-        "repo"
-      ]
-    },
-    {
-      "name": "GlobalGrid2050 Homepage Repository",
-      "url": "https://github.com/Ventusltd/globalgrid2050-hompage",
-      "note": "staging dashboard repo",
-      "tags": [
-        "homepage",
-        "dashboard",
-        "repo",
-        "staging"
-      ]
-    },
-    {
-      "name": "GlobalGrid2050 Monolith Repository",
-      "url": "https://github.com/Ventusltd/globalgrid2050",
-      "note": "legacy source boundary",
-      "tags": [
-        "monolith",
-        "legacy",
-        "repo"
-      ]
-    },
-    {
-      "name": "UK Energy Tracking V6",
-      "url": "https://globalgrid2050.com/uk_energy_tracking_v6/",
-      "note": "live tracker consumer",
-      "tags": [
-        "uk",
-        "energy",
-        "tracking",
-        "v6"
-      ]
-    },
-    {
-      "name": "UK Energy Tracking V6 Generation History",
-      "url": "https://globalgrid2050.com/uk_energy_tracking_v6/generation_history/",
-      "note": "live generation-history consumer",
-      "tags": [
-        "generation",
-        "history",
-        "uk",
-        "v6"
-      ]
-    }
-  ]
+  "description": "Launch-ready page index only. Keep empty until federation output is ready for launch.",
+  "areas": []
 }
