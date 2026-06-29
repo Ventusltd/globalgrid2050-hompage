@@ -1,0 +1,224 @@
+{
+  "schemaVersion": "dashboard_catalog.v1",
+  "title": "GlobalGrid2050",
+  "description": "Structured dashboard catalogue for GlobalGrid2050 links.",
+  "areas": [
+    {
+      "name": "Solar & BESS Topology",
+      "tags": ["solar", "bess", "topology", "sld", "financial"],
+      "children": [
+        {
+          "name": "GIS SLD Topology Engine And Financial Sandbox",
+          "url": "./solar-bess-topology/indexforgis-sld.html"
+        },
+        {
+          "name": "GIS SLD Financial Sandbox V2",
+          "url": "./solar-bess-topology-v2/indexforgis-sld-v2.html"
+        },
+        {
+          "name": "GIS SLD Financial Sandbox V4",
+          "url": "./solar-bess-topology-v4/indexforgis-sld-v4.html"
+        },
+        {
+          "name": "GIS SLD Financial Sandbox V5",
+          "url": "./solar-bess-topology-v5/indexforgis-sld-v5.html"
+        },
+        {
+          "name": "Cable Geometry Visualiser V5",
+          "url": "./solar-bess-topology-v5/cable-geometry-visualiser-v5.html"
+        },
+        {
+          "name": "DC AC LV Solar PV Cable Topology Review V5",
+          "url": "./solar-bess-topology-v5/dc-ac-lv-topology-review-v5.html"
+        },
+        {
+          "name": "Physical Solar Module Layout V5",
+          "url": "./solar-bess-topology-v5/module-layout-v5.html"
+        },
+        {
+          "name": "Solar BESS Topology V6 Testing Phase",
+          "url": "./solar-bess-topology-v6/"
+        },
+        {
+          "name": "Solar BESS Topology V7 Workspace",
+          "url": "./solar-bess-topology-v7/"
+        },
+        {
+          "name": "BESS GIS SLD Financial Sandbox V8",
+          "url": "./solar-bess-topology-v8/bess-gis-sld-financial-sandbox/index.html",
+          "note": "in development"
+        }
+      ]
+    },
+    {
+      "name": "UK Grid Tracking",
+      "tags": ["uk", "grid", "electricity", "carbon", "generation", "market"],
+      "children": [
+        {
+          "name": "UK Live Grid Tracker, Electricity, Carbon, Oil and Metals",
+          "url": "./uk_energy_tracking/"
+        },
+        {
+          "name": "UK Live Grid Tracker V2, Transport Energy Test Clone",
+          "url": "./uk_energy_tracking_v2/"
+        },
+        {
+          "name": "UK Live Grid Tracker V3, Experimental Intelligence Lab",
+          "url": "./uk_energy_tracking_v3/"
+        },
+        {
+          "name": "UK Live Grid Tracker V5, Electricity Market Intelligence Machine",
+          "url": "./uk_energy_tracking_v5/",
+          "note": "in development"
+        },
+        {
+          "name": "UK Live Grid Tracker V6, Modular Electricity Market Intelligence Machine",
+          "url": "./uk_energy_tracking_v6/",
+          "note": "modular development"
+        },
+        {
+          "name": "UK Generation History V6 Module",
+          "url": "./uk_energy_tracking_v6/generation_history/",
+          "note": "in development"
+        },
+        {
+          "name": "UK Generation History V6 2 Backup Mirror",
+          "url": "./uk_energy_tracking_v6_2/generation_history/",
+          "note": "BACKUP"
+        },
+        {
+          "name": "UK Energy Atlas Grid Overlay V8",
+          "url": "./repd_grid_atlasv8/"
+        },
+        {
+          "name": "UK Macro Energy Consumption Trends ONS",
+          "url": "./uk_macro_energy_trends/"
+        },
+        {
+          "name": "UK Renewables Pipeline Analytics Dashboard",
+          "url": "./uk_renewables_pipeline/dashboard.html"
+        },
+        {
+          "name": "Solar Deployment Statistics",
+          "url": "./solar_deployment_statistics/"
+        }
+      ]
+    },
+    {
+      "name": "Cables & Conductors",
+      "tags": ["cables", "conductors", "ac", "dc", "resistance"],
+      "children": [
+        {
+          "name": "AC Cables Knowledge",
+          "url": "./ac_cables_knowledge/"
+        },
+        {
+          "name": "DC Cables Knowledge",
+          "url": "./dc_cables_knowledge/"
+        },
+        {
+          "name": "Conductor Resistances",
+          "url": "./conductor_resistances/"
+        }
+      ]
+    },
+    {
+      "name": "Pricing & Materials",
+      "tags": ["pricing", "materials", "copper", "aluminium", "dap"],
+      "children": [
+        {
+          "name": "33 kV UK DAP Price Estimator",
+          "url": "./33kv_uk_dap_price_estimator/"
+        },
+        {
+          "name": "LV AC and DC Distribution Cables Price Estimator",
+          "url": "./lv_ac_dc_price_estimator/"
+        },
+        {
+          "name": "Copper and Aluminium Historic Prices & Trends",
+          "url": "./copper_and_aluminium_prices_historic_trends/"
+        }
+      ]
+    },
+    {
+      "name": "Components",
+      "tags": ["components", "mv", "hv", "solar"],
+      "children": [
+        {
+          "name": "MV and HV Components",
+          "url": "./mv_and_hv_components/"
+        },
+        {
+          "name": "Solar Components",
+          "url": "./solar_components/"
+        }
+      ]
+    },
+    {
+      "name": "Planning & Requirements",
+      "tags": ["planning", "requirements", "nsip", "bess", "grid studies"],
+      "children": [
+        {
+          "name": "NSIP Solar Farms",
+          "url": "./nsip_solar_farms/"
+        },
+        {
+          "name": "Grid Studies Public",
+          "url": "./data/grid_studies_public/"
+        },
+        {
+          "name": "Employer Requirements BESS Notes",
+          "url": "./employers_requirements_BESS/"
+        },
+        {
+          "name": "Employers Requirements Large Scale Solar",
+          "url": "./employers_requirments_large_scale_solar/"
+        }
+      ]
+    },
+    {
+      "name": "Reference & Knowledge",
+      "tags": ["reference", "knowledge", "definitions", "power systems", "sld"],
+      "children": [
+        {
+          "name": "Definitions",
+          "url": "./definitions/"
+        },
+        {
+          "name": "Power Systems Studies",
+          "url": "./power_systems_studies/"
+        },
+        {
+          "name": "Single Line Diagrams And Grids",
+          "url": "./sld_single_diagrams_diagrams_and_grids/"
+        }
+      ]
+    },
+    {
+      "name": "About & Media",
+      "tags": ["about", "media", "blog", "podcast", "time"],
+      "children": [
+        {
+          "name": "Why VENTUS Ltd Is Building GlobalGrid2050",
+          "url": "./why_ventusltd_building_globalgrid2050/"
+        },
+        {
+          "name": "Blog",
+          "url": "./blog/"
+        },
+        {
+          "name": "Podcast Transcripts",
+          "url": "./podcast_transcripts/"
+        },
+        {
+          "name": "Earth",
+          "url": "./marketing/earth.html"
+        },
+        {
+          "name": "Time Left Today, Hourglass to 2050",
+          "url": "./time_to_2050/"
+        }
+      ]
+    }
+  ]
+}
