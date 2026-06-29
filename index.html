@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>GlobalGrid2050</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./assets/dashboard.css?v=20260629-checklist-1">
+<link rel="stylesheet" href="./assets/dashboard.css?v=20260629-actions-1">
 </head>
 <body>
 <h1>GlobalGrid2050</h1>
@@ -18,52 +18,39 @@
 
 <section class="session-work" aria-labelledby="session-work-title" style="color:#ff3333;border:2px solid #ff3333;padding:16px;font-size:16px;line-height:1.35;">
   <h2 id="session-work-title" style="color:#ff3333;margin:0 0 12px;font-size:28px;line-height:1.15;">29 June 2026 Federation Build Board</h2>
-  <p style="margin:0 0 14px;color:#ff3333;">Everything below this red line is temporary working memory. Tick the active workstream. Put the most important task at the top.</p>
+  <p style="margin:0 0 14px;color:#ff3333;">Everything below this red line is temporary working memory. Tick the active workstream. Keep the most important task at the top.</p>
 
-  <h3 style="color:#ff3333;margin:18px 0 10px;font-size:20px;">Work log</h3>
+  <h3 style="color:#ff3333;margin:18px 0 10px;font-size:20px;">Actions</h3>
   <div id="taskChecklist" class="checklist-rows">
     <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;">
-      <input class="task-check" type="checkbox" data-session-item="data-gb-electricity-parquet-spine" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
-      <span>Data GB electricity repo confirmed as the lean Parquet data spine.</span>
+      <input class="task-check" type="checkbox" data-session-item="finish-gb-electricity-data" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
+      <span>Finish GB electricity data.</span>
     </label>
     <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;">
-      <input class="task-check" type="checkbox" data-session-item="gb-interconnector-data-domain" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
-      <span>GB interconnector data domain goes inside data-gb-electricity for now.</span>
+      <input class="task-check" type="checkbox" data-session-item="finish-interconnector-parquet-port" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
+      <span>Finish interconnector data port to the new Parquet system.</span>
     </label>
     <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;">
-      <input class="task-check" type="checkbox" data-session-item="parquet-next-audit" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
-      <span>Parquet interconnector audit is the next controlled task.</span>
+      <input class="task-check" type="checkbox" data-session-item="create-electricity-ui-repo" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
+      <span>Create new UI repo for electricity prices and generation history.</span>
     </label>
     <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;">
-      <input class="task-check" type="checkbox" data-session-item="lean-data-before-ui" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
-      <span>Lean data first before constructing new UI repos.</span>
+      <input class="task-check" type="checkbox" data-session-item="wire-data-to-new-ui" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
+      <span>Wire the clean data to the new UI.</span>
     </label>
     <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;">
-      <input class="task-check" type="checkbox" data-session-item="launch-ready-pages-only" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
-      <span>Above the red line is reserved only for launch-ready pages.</span>
-    </label>
-    <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;">
-      <input class="task-check" type="checkbox" data-session-item="monolith-legacy-boundary" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
-      <span>Monolith is a legacy source boundary, not new data architecture.</span>
-    </label>
-    <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;">
-      <input class="task-check" type="checkbox" data-session-item="uk-energy-tracker-live-consumer" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
-      <span>UK Energy Tracking V6 generation history stays as live consumer for now.</span>
-    </label>
-    <label class="check-row" style="display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;padding:8px 0;color:#ff3333;">
-      <input class="task-check" type="checkbox" data-session-item="public-caution" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
-      <span>Public URL caution: no private, NDA, or personal working material.</span>
+      <input class="task-check" type="checkbox" data-session-item="split-generation-and-interconnectors" style="width:18px;height:18px;margin-top:2px;accent-color:#ff3333;">
+      <span>Make sure domestic/onshore generation and interconnector flows are split correctly so users are not confused.</span>
     </label>
   </div>
 
   <h3 style="color:#ff3333;margin:22px 0 10px;font-size:20px;">Live scratchpad</h3>
-  <textarea id="sessionNotes" rows="15" spellcheck="true" style="width:100%;box-sizing:border-box;background:#080000;color:#ff3333;border:1px solid #ff3333;font-family:Courier,monospace;font-size:15px;line-height:1.4;padding:10px;">NEXT:
-Audit-only task for data-gb-electricity.
-Add interconnectors as a top-level Parquet domain.
-Keep generation, prices and interconnectors separate.
-Do not build new UI repo until clean Parquet outputs are proven.
-Do not promote this homepage until federation is complete.
-Do not put raw bulk data in the homepage or app repos.
+  <textarea id="sessionNotes" rows="13" spellcheck="true" style="width:100%;box-sizing:border-box;background:#080000;color:#ff3333;border:1px solid #ff3333;font-family:Courier,monospace;font-size:15px;line-height:1.4;padding:10px;">CURRENT ACTIONS:
+Finish GB electricity data.
+Finish interconnector data port to the new Parquet system.
+Create new UI repo for electricity prices and generation history.
+Wire the clean data to the new UI.
+Keep domestic/onshore generation and interconnector flows split correctly.
 
 SMALL PRINT:
 To change this board, edit index.html here:
@@ -73,7 +60,6 @@ Only edit between TEMP SESSION BOARD START and TEMP SESSION BOARD END.
 Move a check-row block higher to make it more important.
 Copy a check-row block to add a task.
 Delete a check-row block to remove a task.
-Commit to main and GitHub Pages will redeploy.
 Or ask ChatGPT to reorder/add/delete the task.
 </textarea>
 
@@ -85,6 +71,6 @@ Or ask ChatGPT to reorder/add/delete the task.
   <p><strong>Disclaimer:</strong> Content provided for general technical documentation and research purposes only.</p>
 </div>
 
-<script src="./assets/dashboard.js?v=20260629-checklist-1" defer></script>
+<script src="./assets/dashboard.js?v=20260629-actions-1" defer></script>
 </body>
 </html>
