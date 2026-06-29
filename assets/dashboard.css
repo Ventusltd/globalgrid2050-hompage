@@ -12,9 +12,17 @@ body {
 }
 h1 { margin-top: 0; }
 h2 { margin-top: 36px; }
+h3 { margin-top: 28px; }
 
 a { color: #66ccff; text-decoration: none; }
 a:hover { text-decoration: underline; }
+
+.build-status {
+  border: 1px solid #ff3333;
+  color: #ff3333;
+  font-weight: bold;
+  padding: 14px;
+}
 
 .dev-status { color: #ff3333; font-weight: bold; font-size: 16px; }
 
@@ -55,6 +63,17 @@ a:hover { text-decoration: underline; }
 .session-work p { margin-top: 0; }
 .session-work label { display: block; padding: 9px 0; }
 .session-work input { transform: scale(1.25); margin-right: 10px; }
+.session-work textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: #080000;
+  color: #ff3333;
+  border: 1px solid #ff3333;
+  font-family: Courier, monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 12px;
+}
 
 .footer {
   margin-top: 60px;
