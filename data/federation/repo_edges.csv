@@ -1,0 +1,10 @@
+from_repo,to_repo,edge_type,cardinality,data_product,status,notes
+Ventusltd/globalgrid2050,Ventusltd/data-gb-electricity,source_port,one-to-many,FUELINST FUELHH prices,active,Monolith CSV history ported then fresh Elexon monthly updates
+Ventusltd/globalgrid2050,Ventusltd/data-interconnectors,oracle_compare,one-to-one,interconnector monthly JSON oracle,active,Monolith interconnector JSON used as reconciliation oracle not source copy
+Elexon BMRS API,Ventusltd/data-gb-electricity,source_api,one-to-many,FUELINST FUELHH prices,active,Fresh API monthly updater
+Elexon BMRS API,Ventusltd/data-interconnectors,source_api,one-to-one,FUELINST INT rows,active,Fresh API interconnector updater
+Ventusltd/data-gb-electricity,Ventusltd/gb-electricity-ui,data_dependency,one-to-many,generation and prices,blocked_until_ui_wiring,UI consumes after data proof
+Ventusltd/data-interconnectors,Ventusltd/gb-electricity-ui,data_dependency,one-to-many,interconnector flows,blocked_until_ui_wiring,UI consumes after data proof
+Ventusltd/gb-electricity-ui,Ventusltd/globalgrid2050-hompage,catalogue_link,many-to-one,live UI route,future,Homepage links only after route is proven
+Ventusltd/data-gb-electricity,Ventusltd/globalgrid2050-hompage,metadata_map,many-to-one,repo node metadata,active,Federation systems map metadata
+Ventusltd/data-interconnectors,Ventusltd/globalgrid2050-hompage,metadata_map,many-to-one,repo node metadata,active,Federation systems map metadata
