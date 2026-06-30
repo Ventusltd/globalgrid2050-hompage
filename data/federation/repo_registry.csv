@@ -1,0 +1,6 @@
+repo_full_name,repo_name,repo_type,domain,status,source_of_truth,grain,key_fields,owns_data,serves_pages,notes
+Ventusltd/globalgrid2050-hompage,globalgrid2050-hompage,homepage,governance,active,manual federation doctrine and catalogue,repo node,repo_full_name,false,true,Public gateway doctrine catalogue and federation systems map
+Ventusltd/globalgrid2050,globalgrid2050,source_archive,monolith,retiring,old monolith archive,mixed legacy files,n/a,true,true,Old source archive and oracle do not bulk copy
+Ventusltd/data-gb-electricity,data-gb-electricity,data,GB electricity,active,Elexon BMRS and monolith port,FUELINST FUELHH prices,periodStartUTC plus fuelType or time plus technology or periodStartUTC,true,false,GB electricity Parquet data product
+Ventusltd/data-interconnectors,data-interconnectors,data,GB interconnectors,active,Elexon BMRS FUELINST INT rows,interconnector cable period,periodStartUTC plus bmrsCode,true,false,GB interconnector flow Parquet data product
+Ventusltd/gb-electricity-ui,gb-electricity-ui,ui,GB electricity,staging,data-gb-electricity and data-interconnectors,UI route,route path,false,true,UI reader only no data ownership
