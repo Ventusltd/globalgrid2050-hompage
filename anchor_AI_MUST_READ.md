@@ -8,7 +8,9 @@ This file is the fast anchor for every future AI session touching the GlobalGrid
 
 GlobalGrid2050 is no longer one monolith. It is becoming a federation of focused repositories connected by explicit data contracts, workflows and catalogue links.
 
-The homepage repo is the public gateway, doctrine layer, catalogue layer and systems-map layer.
+The homepage repo is the public gateway, doctrine layer, catalogue layer and visual consumer of the systems map.
+
+The dedicated data repo `Ventusltd/data-federation-map-for-globalgrid2050-all-repos` owns the backend federation systems map as a DuckDB and Parquet metadata product.
 
 Data repos own data products. They must use declared grain, declared key, compact Parquet where appropriate, read-back verification and audit reports.
 
@@ -19,11 +21,12 @@ The old `Ventusltd/globalgrid2050` monolith is a retirement source archive and o
 ## Current core repos
 
 ```text
-Ventusltd/globalgrid2050-hompage   gateway, doctrine, catalogue, federation map
-Ventusltd/globalgrid2050           old monolith source archive and oracle
-Ventusltd/data-gb-electricity      GB electricity generation and price Parquet data product
-Ventusltd/data-interconnectors     GB interconnector flow Parquet data product
-Ventusltd/gb-electricity-ui        UI reader for GB electricity tracker and generation-history pages
+Ventusltd/globalgrid2050-hompage                       gateway, doctrine, catalogue, visual map consumer
+Ventusltd/data-federation-map-for-globalgrid2050-all-repos  federation systems map data product
+Ventusltd/globalgrid2050                               old monolith source archive and oracle
+Ventusltd/data-gb-electricity                          GB electricity generation and price Parquet data product
+Ventusltd/data-interconnectors                         GB interconnector flow Parquet data product
+Ventusltd/gb-electricity-ui                            UI reader for GB electricity tracker and generation-history pages
 ```
 
 ## Non-negotiable data rule
@@ -95,9 +98,9 @@ One workflow must never try to clone a million repos. The map builder must track
 docs/DATA_DISCIPLINE_MANUAL.md
 docs/FEDERATION_INSTRUCTION_MANUAL.md
 BACKEND_README_NOTES.md
-data/federation/repo_registry.csv
-data/federation/repo_edges.csv
-scripts/build_federation_systems_map.py
+Ventusltd/data-federation-map-for-globalgrid2050-all-repos/README.md
+Ventusltd/data-federation-map-for-globalgrid2050-all-repos/DATA_CONTRACT.md
+Ventusltd/data-federation-map-for-globalgrid2050-all-repos/scripts/build_federation_map.py
 ```
 
 ## Operating command
