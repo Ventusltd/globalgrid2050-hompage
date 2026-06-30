@@ -3,8 +3,10 @@ Ventusltd/globalgrid2050,Ventusltd/data-gb-electricity,source_port,one-to-many,F
 Ventusltd/globalgrid2050,Ventusltd/data-interconnectors,oracle_compare,one-to-one,interconnector monthly JSON oracle,active,Monolith interconnector JSON used as reconciliation oracle not source copy
 Elexon BMRS API,Ventusltd/data-gb-electricity,source_api,one-to-many,FUELINST FUELHH prices,active,Fresh API monthly updater
 Elexon BMRS API,Ventusltd/data-interconnectors,source_api,one-to-one,FUELINST INT rows,active,Fresh API interconnector updater
+GitHub API,Ventusltd/data-federation-map-for-globalgrid2050-all-repos,source_api,one-to-many,repo metadata and canonical file evidence,active,Weekly federation map scan without cloning every repo
 Ventusltd/data-gb-electricity,Ventusltd/gb-electricity-ui,data_dependency,one-to-many,generation and prices,blocked_until_ui_wiring,UI consumes after data proof
 Ventusltd/data-interconnectors,Ventusltd/gb-electricity-ui,data_dependency,one-to-many,interconnector flows,blocked_until_ui_wiring,UI consumes after data proof
+Ventusltd/data-federation-map-for-globalgrid2050-all-repos,Ventusltd/globalgrid2050-hompage,data_dependency,one-to-one,federation systems map,active,Homepage consumes federation map for visual single-line diagram and catalogue intelligence
 Ventusltd/gb-electricity-ui,Ventusltd/globalgrid2050-hompage,catalogue_link,many-to-one,live UI route,future,Homepage links only after route is proven
-Ventusltd/data-gb-electricity,Ventusltd/globalgrid2050-hompage,metadata_map,many-to-one,repo node metadata,active,Federation systems map metadata
-Ventusltd/data-interconnectors,Ventusltd/globalgrid2050-hompage,metadata_map,many-to-one,repo node metadata,active,Federation systems map metadata
+Ventusltd/data-gb-electricity,Ventusltd/data-federation-map-for-globalgrid2050-all-repos,metadata_subject,many-to-one,repo node and dependency metadata,active,Scanned as one federation node
+Ventusltd/data-interconnectors,Ventusltd/data-federation-map-for-globalgrid2050-all-repos,metadata_subject,many-to-one,repo node and dependency metadata,active,Scanned as one federation node
