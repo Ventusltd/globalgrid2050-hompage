@@ -1,0 +1,67 @@
+name: GridBot Federation Systems Map
+
+on:
+  schedule:
+    - cron: '47 6 2 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gridbot-federation-systems-map
+  cancel-in-progress: false
+
+jobs:
+  federation-systems-map:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout homepage using GridBot PAT
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GRIDBOT_PAT }}
+
+      - name: Sync latest main before processing
+        run: git pull --ff-only origin main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install DuckDB
+        run: |
+          set -euo pipefail
+          python -m pip install --upgrade pip
+          pip install duckdb
+
+      - name: Build federation systems map
+        run: |
+          set -euo pipefail
+          python scripts/build_federation_systems_map.py
+
+      - name: Upload federation systems map report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: federation-systems-map-report
+          path: |
+            reports/FEDERATION_SYSTEMS_MAP_LATEST.md
+            reports/json/FEDERATION_SYSTEMS_MAP_LATEST.json
+
+      - name: Commit federation systems map outputs
+        run: |
+          set -euo pipefail
+          git config user.name "Gridbot"
+          git config user.email "gridbot@users.noreply.github.com"
+          git add data/federation/system_map reports/FEDERATION_SYSTEMS_MAP_LATEST.md reports/json/FEDERATION_SYSTEMS_MAP_LATEST.json
+          if git diff --cached --quiet; then
+            echo "No federation map changes to commit."
+          else
+            git commit -m "data(federation): update systems map"
+            git pull --ff-only origin main
+            git push origin HEAD:${GITHUB_REF_NAME}
+          fi
