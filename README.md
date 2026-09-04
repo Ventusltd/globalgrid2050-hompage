@@ -1,3 +1,17 @@
+# RETIRED — misspelled repository
+
+This repository name is missing the "e" in "homepage". It has been retired.
+
+The GlobalGrid2050 homepage, and all 59 commits of history from this repository, now live at:
+
+**https://github.com/Ventusltd/globalgrid2050-homepage**
+
+Served at https://ventusltd.github.io/globalgrid2050-homepage/
+
+Do not commit here. `index.html` is now a redirect stub only.
+
+---
+
 # GlobalGrid2050 Homepage
 
 ## Vision
